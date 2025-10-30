@@ -1407,32 +1407,32 @@ todo-frontend/
 
 ขั้นตอนใน GitHub Actions Workflow
 
-Checkout code
-ดึงซอร์สโค้ดจาก GitHub Repository มาทำงานในเครื่องเซิร์ฟเวอร์ของ GitHub Actions
+- Checkout code
+  ดึงซอร์สโค้ดจาก GitHub Repository มาทำงานในเครื่องเซิร์ฟเวอร์ของ GitHub Actions
 
-Setup Node.js
-ติดตั้งสภาพแวดล้อม (Runtime) สำหรับรันโปรเจกต์ Next.js
+- Setup Node.js
+  ติดตั้งสภาพแวดล้อม (Runtime) สำหรับรันโปรเจกต์ Next.js
 
-Install dependencies
-ติดตั้งแพ็กเกจทั้งหมดจากไฟล์ package.json เช่น React, TailwindCSS, Axios
+-  Install dependencies
+  ติดตั้งแพ็กเกจทั้งหมดจากไฟล์ package.json เช่น React, TailwindCSS, Axios
 
-Build Next.js App
-รันคำสั่ง npm run build เพื่อสร้างไฟล์ Static ของเว็บไซต์ (HTML, CSS, JS)
+-  Build Next.js App
+  รันคำสั่ง npm run build เพื่อสร้างไฟล์ Static ของเว็บไซต์ (HTML, CSS, JS)
 
-Upload artifact
-เก็บผลลัพธ์การ build ที่อยู่ในโฟลเดอร์ out/ เพื่อใช้ในขั้นตอน deploy
+-  Upload artifact
+  เก็บผลลัพธ์การ build ที่อยู่ในโฟลเดอร์ out/ เพื่อใช้ในขั้นตอน deploy
 
-Deploy to GitHub Pages
-อัปโหลดไฟล์ที่ build เสร็จแล้วขึ้น GitHub Pages เพื่อเผยแพร่เว็บไซต์อัตโนมัติ
+-  Deploy to GitHub Pages
+  อัปโหลดไฟล์ที่ build เสร็จแล้วขึ้น GitHub Pages เพื่อเผยแพร่เว็บไซต์อัตโนมัติ
 
 
 2. **CORS**: ทำไม Backend ต้อง enable CORS สำหรับ Frontend
 
-เพราะ Frontend (GitHub Pages) และ Backend (Render) อยู่คนละโดเมน
-เบราว์เซอร์จะ “บล็อก” การเรียก API ข้ามโดเมนโดยอัตโนมัติ
+  เพราะ Frontend (GitHub Pages) และ Backend (Render) อยู่คนละโดเมน
+  เบราว์เซอร์จะ “บล็อก” การเรียก API ข้ามโดเมนโดยอัตโนมัติ
 
-ดังนั้น Backend ต้อง เปิด CORS เพื่ออนุญาตให้ Frontend
-สามารถเชื่อมต่อและเรียกใช้ API ได้อย่างปลอดภัย
+  ดังนั้น Backend ต้อง เปิด CORS เพื่ออนุญาตให้ Frontend
+  สามารถเชื่อมต่อและเรียกใช้ API ได้อย่างปลอดภัย
 
 
 ## ส่วนที่ 16: แหล่งข้อมูลเพิ่มเติม
