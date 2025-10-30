@@ -1021,7 +1021,7 @@ git push origin main
 ```
 
 รอให้ Backend redeploy บน Render (ประมาณ 3-5 นาที)
-
+![alt text](image.png)
 ---
 
 ## ส่วนที่ 8: ทดสอบ Local
@@ -1058,9 +1058,11 @@ npm run dev
 - ✅ UI สวยงาม มี animations
 
 ## บันทึกรูปผลการทดลอง
-```bash
-# บันทึกรูปผลการทดลองที่นี่
-``` 
+![alt text](image-4.png)
+![alt text](image-3.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
 
 ### ขั้นตอนที่ 8.4: Test Build
 
@@ -1172,9 +1174,8 @@ git push origin main
 
 
 ## บันทึกรูปผลการ Deploy
-```bash
-# บันทึกรูปผลการ Deploy ที่นี่
-```
+``bash
+![alt text](image-8.png)
 
 ### ขั้นตอนที่ 10.3: หา URL ของ Website
 
@@ -1203,9 +1204,10 @@ https://your-username.github.io/todo-frontend/
 
 ---
 ## บันทึกรูปผลการรันหน้า Front-end
-```bash
-# บันทึกรูปผลการรันหน้า Front-end ที่นี่
-```
+``bash
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
 
 ## ส่วนที่ 11: Troubleshooting
 
@@ -1266,6 +1268,8 @@ Access to XMLHttpRequest has been blocked by CORS policy
   background: linear-gradient(to right, #0ea5e9, #10b981);
 }
 ```
+![alt text](image-12.png)
+
 ---
 
 ## ส่วนที่ 13: สรุปและ Architecture
@@ -1358,41 +1362,41 @@ todo-frontend/
 
 ### Pre-deployment Checklist
 
-- [ ] Node.js 18+ ติดตั้งแล้ว
-- [ ] Git ติดตั้งแล้ว
-- [ ] GitHub Account พร้อม
-- [ ] Backend API ทำงานปกติ
-- [ ] CORS ตั้งค่าถูกต้อง
+- [✅] Node.js 18+ ติดตั้งแล้ว
+- [✅] Git ติดตั้งแล้ว
+- [✅] GitHub Account พร้อม
+- [✅] Backend API ทำงานปกติ
+- [✅] CORS ตั้งค่าถูกต้อง
 
 ### Development Checklist
 
-- [ ] สร้างโปรเจกต์ Next.js
-- [ ] ติดตั้ง dependencies ครบ
-- [ ] สร้าง API layer (`src/lib/api.js`)
-- [ ] สร้าง components ทั้ง 3 ตัว
-- [ ] สร้าง main page
-- [ ] แก้ไข styling
-- [ ] ทดสอบ local ผ่าน
+- [✅] สร้างโปรเจกต์ Next.js
+- [✅] ติดตั้ง dependencies ครบ
+- [✅] สร้าง API layer (`src/lib/api.js`)
+- [✅] สร้าง components ทั้ง 3 ตัว
+- [✅] สร้าง main page
+- [✅] แก้ไข styling
+- [✅] ทดสอบ local ผ่าน
 
 ### Deployment Checklist
 
-- [ ] สร้าง GitHub repository
-- [ ] สร้าง workflow file
-- [ ] ตั้งค่า GitHub Pages
-- [ ] ตั้งค่า workflow permissions
-- [ ] อัพเดท API URL ใน workflow
-- [ ] Push code ไป GitHub
-- [ ] Workflow รันสำเร็จ
-- [ ] Website เข้าถึงได้
-- [ ] ทดสอบ features ครบ
+- [✅] สร้าง GitHub repository
+- [✅] สร้าง workflow file
+- [✅] ตั้งค่า GitHub Pages
+- [✅] ตั้งค่า workflow permissions
+- [✅] อัพเดท API URL ใน workflow
+- [✅] Push code ไป GitHub
+- [✅] Workflow รันสำเร็จ
+- [✅] Website เข้าถึงได้
+- [✅] ทดสอบ features ครบ
 
 ### Testing Checklist
 
-- [ ] เปิดหน้าเว็บได้
-- [ ] API Status เป็น "Connected"
-- [ ] เพิ่ม Todo ได้
-- [ ] ลบ Todo ได้
-- [ ] Statistics แสดงถูกต้อง
+- [✅] เปิดหน้าเว็บได้
+- [✅] API Status เป็น "Connected"
+- [✅] เพิ่ม Todo ได้
+- [✅] ลบ Todo ได้
+- [✅] Statistics แสดงถูกต้อง
 
 
 ---
@@ -1400,7 +1404,35 @@ todo-frontend/
 ## ส่วนที่ 15: คำถามท้ายการทดลอง
 
 1. **CI/CD Pipeline**: อธิบายขั้นตอนใน GitHub Actions workflow
+
+ขั้นตอนใน GitHub Actions Workflow
+
+Checkout code
+ดึงซอร์สโค้ดจาก GitHub Repository มาทำงานในเครื่องเซิร์ฟเวอร์ของ GitHub Actions
+
+Setup Node.js
+ติดตั้งสภาพแวดล้อม (Runtime) สำหรับรันโปรเจกต์ Next.js
+
+Install dependencies
+ติดตั้งแพ็กเกจทั้งหมดจากไฟล์ package.json เช่น React, TailwindCSS, Axios
+
+Build Next.js App
+รันคำสั่ง npm run build เพื่อสร้างไฟล์ Static ของเว็บไซต์ (HTML, CSS, JS)
+
+Upload artifact
+เก็บผลลัพธ์การ build ที่อยู่ในโฟลเดอร์ out/ เพื่อใช้ในขั้นตอน deploy
+
+Deploy to GitHub Pages
+อัปโหลดไฟล์ที่ build เสร็จแล้วขึ้น GitHub Pages เพื่อเผยแพร่เว็บไซต์อัตโนมัติ
+
+
 2. **CORS**: ทำไม Backend ต้อง enable CORS สำหรับ Frontend
+
+เพราะ Frontend (GitHub Pages) และ Backend (Render) อยู่คนละโดเมน
+เบราว์เซอร์จะ “บล็อก” การเรียก API ข้ามโดเมนโดยอัตโนมัติ
+
+ดังนั้น Backend ต้อง เปิด CORS เพื่ออนุญาตให้ Frontend
+สามารถเชื่อมต่อและเรียกใช้ API ได้อย่างปลอดภัย
 
 
 ## ส่วนที่ 16: แหล่งข้อมูลเพิ่มเติม
