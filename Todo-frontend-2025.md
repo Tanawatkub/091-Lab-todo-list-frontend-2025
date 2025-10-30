@@ -1428,7 +1428,7 @@ todo-frontend/
 
 2. **CORS**: ทำไม Backend ต้อง enable CORS สำหรับ Frontend
 
-  เพราะ Frontend (GitHub Pages) และ Backend (Render) อยู่คนละโดเมน
+-  เพราะ Frontend (GitHub Pages) และ Backend (Render) อยู่คนละโดเมน
   เบราว์เซอร์จะ “บล็อก” การเรียก API ข้ามโดเมนโดยอัตโนมัติ
 
   ดังนั้น Backend ต้อง เปิด CORS เพื่ออนุญาตให้ Frontend
